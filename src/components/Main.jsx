@@ -16,11 +16,11 @@ export default function Main() {
     return (
         <main>
             <ListButtons>
-                {languages.map(language => <li key={language.id}><button onClick={() => setSelect(isSelect = language.id)} >{language.title}</button></li>)}
+                {languages.map(language => <li key={language.id}><button className='btn' onClick={() => setSelect(isSelect = language.id)} >{language.title}</button></li>)}
             </ListButtons>
-            <Card>
+            <Card className='card'>
                 <h2>{isSelect ? renderText(isSelect, 'title') : 'Nessun linguaggio selezionato'}</h2>
-                <p>{isSelect ? renderText(isSelect, 'description') : ''}</p>
+                <p className='card-text'>{isSelect ? renderText(isSelect, 'description') : ''}</p>
             </Card>
         </main>
     );

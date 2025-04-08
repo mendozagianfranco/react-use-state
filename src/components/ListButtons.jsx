@@ -1,6 +1,6 @@
 export default function ListButtons({ children }) {
     return (
-        <ul>
+        <ul className='list-btn'>
             {children}
         </ul>
     );
